@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events html</title>
+</head>
+<body style="background-color: black; color: aliceblue;">
+    <h2>Amazing Images</h2>
+    <ul id="props">
+        <li>
+            <img width="100px" id="photoshop" src="https://images.pexels.com/photos/1224158/pexels-photo-1224158.jpeg?auto=compress&cs=tinysrgb&w=600" alt="photoshop">
+        </li>
+        <li>
+            <img width="100px" id="photo" src="https://images.pexels.com/photos/1224158/pexels-photo-1224158.jpeg?auto=compress&cs=tinysrgb&w=600" alt="photoshop" >
+        </li>
+        <li>
+            <img width="100px" id="shop" src="https://images.pexels.com/photos/1224158/pexels-photo-1224158.jpeg?auto=compress&cs=tinysrgb&w=600" alt="photoshop">
+        </li>
+        <li>
+            <img width="100px" id="power" src="https://images.pexels.com/photos/1224158/pexels-photo-1224158.jpeg?auto=compress&cs=tinysrgb&w=600" alt="photoshop">
+        </li>
+        <li >
+            <a style="color: aliceblue;" href="https://google.com"  id="Google">Google</a>
+        </li>
+    </ul>
+    
+</body>
+<script>
+    // document.getElementById('photo').onclick = function(){
+    //     alert("Photo Clicked!!")
+    // }
+    // document.getElementById('photo').addEventListener('click',function(e){
+    //    console.log(e);
+    // },false)
+    //type,timestamp,defaultPrevented
+    //target, toElement, srcElement, currentTarget
+    //clientX, clientY, screenX, screenY
+    //ctrlKey, shiftKey,altKey,keyCode.
+
+    //Event Propagation.
+
+
+    //Event Capturing==>from top to bottom  when default value will be true.
+    // Event Bubbling ==> from inside to outside.    when default value will be false.
+
+
+
+    document.getElementById('props').addEventListener('click',function(e){
+       console.log("ul is clicked");
+    },false)
+
+    //STOP PROPAGATION STOPS BUBBLING.
+
+    document.getElementById('photo').addEventListener('click',function(e){
+       console.log("photo 2 clicked.");
+       e.stopPropagation();
+    },false)
+    document.getElementById('Google').addEventListener('click',function(e){
+        console.log("Google clicked");
+        e.stopPropagation();
+        e.preventDefault();
+      },false)
+      document.querySelector('#props').addEventListener('click',function(e){
+        console.log(e.target.parentNode);
+        let removeIt = e.target.parentNode
+        removeIt.remove();
+
+      },false)
+</script>
+</html>
