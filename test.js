@@ -50,6 +50,7 @@ console.log("a " + 1 + 3);
 console.log(5 + 8 +"a " + 1 + 7);
 console.log(+true);
 console.log(+"");
+//3a a3 a 13 13a 17 1 0  Output of all the above operations.
 
 //Comparison'
 console.log("2">1);  //Here js converts string to the number
