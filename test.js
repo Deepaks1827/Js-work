@@ -61,5 +61,6 @@ console.log(null >= 0);
 
 //=== Strict comparison
 console.log("2" === 2);
+//false
                                      
 
