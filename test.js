@@ -57,6 +57,7 @@ console.log("2">1);  //Here js converts string to the number
 console.log(null > 0); //> and == works differently that comparison converts null to number
 console.log(null == 0);
 console.log(null >= 0);
+//true false false true
 
 //=== Strict comparison
 console.log("2" === 2);
