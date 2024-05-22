@@ -2,7 +2,7 @@
 //1 => Primitive --- String, Boolean, bigInt, Integer,null , undefined, Symbol.
 let id = Symbol("Deepak");
 let id1 = Symbol("Deepak");
-console.log(id===id1);
+console.log(id===id1);   //false.
 
 let userEmail;   // here undefined value will be stored.
 const a1 = null;
@@ -33,8 +33,8 @@ let myName = "Deepak";
 let myName1 = myName;
 myName1= "Jagdeesh";
 
-console.log(myName);
-console.log(myName1);
+console.log(myName);      //Deepak
+console.log(myName1);      //Jagdeesh
 
 let obj1 ={
     name:"Deepak",
@@ -42,6 +42,6 @@ let obj1 ={
 }
 
 let obj2 = obj1
-obj2.name = "Shukla";
-console.log(obj1.name);
-console.log(obj2.name);
+obj2.name = "Shukla";        //Here both are referencing to the same memory thats why value is same .using spread op we can overcome this.
+console.log(obj1.name);    //Shukla.
+console.log(obj2.name);     //Shukla.
